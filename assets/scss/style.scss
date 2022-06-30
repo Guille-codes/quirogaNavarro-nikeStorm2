@@ -1,0 +1,201 @@
+$white: #fff;
+$light-blue: #37FDE8;
+$gris: rgba(255, 255, 255, 0.1);
+$gris2: rgba(255, 255, 255, 0.5);
+$sombra-color: rgba(0, 0, 0, 0.3);
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../img/Fondo2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.navbar-toggler{
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+.navbar ul li{
+    position: relative;
+    a{
+        font-family: 'Open Sans', sans-serif;
+        color: $white;
+        font-weight: 300;
+        text-decoration: none;
+    }
+    &:after{
+        content: "";
+        height: 4px;
+        width: 0;
+        background-color: $light-blue;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 50%;
+        transition: all 0.5s;
+        will-change: width;
+    }
+    &:hover:after{
+        width: 100%;
+        right: 0;
+    }
+}
+main{
+    font-family: 'Montserrat', sans-serif;
+    color: $white;
+    font-size: 0.9rem;
+    span{
+        color: $light-blue;
+    }
+}
+.main-snikers img{
+    transition: all 1s;
+    &:hover{
+        transform: scale(1.01) translate(10px, 12px);
+    }
+}
+.main-buy{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    a{
+        text-decoration: none;
+        color: $white;
+        font-weight: 700;
+        width: 150px;
+        height: 55px;
+        border-radius: 15px;
+        background: $gris;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid $gris2;
+        border-left: 1px solid $gris2;
+        backdrop-filter: blur(5px);
+        box-shadow: 5px 5px 12px $sombra-color;
+        transition: all 1s;
+        &:hover{
+            transform: scale(1.1);
+        }
+        img{
+            width: 25px;
+            height: 25px;
+            margin-left: 9px;
+        }
+    }
+}
+.coleccion-article{
+    transition: all 1s;
+    &:hover{
+        transform: translate(10px, 5px);
+    }
+}
+.coleccion-done a{
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    width: 93px;
+    height: 26px;
+    border-radius: 20px;
+    background-color: $light-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.join-conteiner{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 12px;
+    row-gap: 12px;
+    grid-template-areas: "article1 article1 article1 article5"
+                        "article2 article3 article4 article5";
+}
+.article1{
+    grid-area: article1;
+    transition: all 1s;
+    &:hover{
+        grid-area: article1;
+        transform: scale(1.01);
+    }
+}
+.article2{
+    grid-area: article2;
+    transition: all 1s;
+    &:hover{
+        grid-area: article2;
+        transform: scale(1.01);
+    }
+}
+.article3{
+    grid-area: article3;
+    transition: all 1s;
+    &:hover{
+        grid-area: article3;
+        transform: scale(1.01);
+    }
+}
+.article4{
+    grid-area: article4;
+    transition: all 1s;
+    &:hover{
+        grid-area: article4;
+        transform: scale(1.01);
+    }
+}
+.article5{
+    grid-area: article5;
+    transition: all 1s;
+    &:hover{
+        grid-area: article5;
+        transform: scale(1.01);
+    }
+}
+.main-shop--image{
+    transition: all 1s;
+    &:hover{
+        transform: scale(1.02);
+    }
+}
+.main-shop4{
+    p{
+        font-size: 3rem;
+    }
+    a {
+    color: $light-blue;
+    text-decoration: none;
+    }
+}
+.main-shop5 p{
+    font-size: 0.9rem;
+}
+.main-shop6 a{
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    width: 280px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: $light-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+footer{
+    margin-top: auto;
+    a{
+        text-decoration: none;
+    }
+}
